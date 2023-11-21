@@ -19,7 +19,9 @@ import {
   Platform,
   Image
 } from 'react-native';
-import Screen1 from "./screens/Screen1.js"
+import Screen3 from "./screens/Screen3.js"
+import BottomTabNavigator from './navigation/BottomTabNavigator';
+import { NavigationContainer } from '@react-navigation/native';
 import {
   Colors,
   DebugInstructions,
@@ -67,13 +69,10 @@ function App(): JSX.Element {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <Screen1/>
-      </SafeAreaView>
+
+       <NavigationContainer>
+       <BottomTabNavigator/>
+       </NavigationContainer>
   );
 }
 
