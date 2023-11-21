@@ -6,6 +6,7 @@
  */
 
 import React from 'react';
+
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -15,9 +16,10 @@ import {
   Text,
   useColorScheme,
   View,
-  Platform
+  Platform,
+  Image
 } from 'react-native';
-
+import Screen1 from "./screens/Screen1.js"
 import {
   Colors,
   DebugInstructions,
@@ -29,6 +31,7 @@ import {
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
+
 
 function Section({children, title}: SectionProps): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -69,7 +72,8 @@ function App(): JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-    </SafeAreaView>
+      <Screen1/>
+      </SafeAreaView>
   );
 }
 
